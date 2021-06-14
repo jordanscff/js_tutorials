@@ -22,7 +22,7 @@ console.log(population > finlandPopulation);
 let averagePopulation = 33000000;
 console.log(averagePopulation > population);
 
-let description = 'Portugal is in Europe, and its 11 million people speak portuguese';
+let description = `Portugal is in Europe, and its 11 million people speak portuguese`;
 
 let markWeight = 95;
 let johnWeight = 85;
@@ -34,4 +34,20 @@ let johnBMI = johnWeight / (johnHeight*johnHeight)
 
 let markHigherBMI = (markBMI>johnBMI)
 
-console.log(markHigherBMI)
+let outputStatement;
+if (markHigherBMI) {
+  outputStatement = `Mark's BMI (${markBMI}) is higher than John's (${johnBMI})!`
+} else {
+  outputStatement = `Mark's BMI (${markBMI}) is lower than John's (${johnBMI})!`
+}
+
+console.log(outputStatement)
+
+let populationInfo;
+if (population > 33000000) {
+  populationInfo = `Portugal's population is above average`;
+} else {
+  populationInfo = `Portugal's population is 22 million below average`;
+}
+
+console.log(populationInfo);
