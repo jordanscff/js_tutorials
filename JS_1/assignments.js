@@ -1,6 +1,6 @@
 const country = 'Scotland';
 const continent = 'Europe';
-let population = 6500000;
+let population = 65000000;
 const isIsland = true;
 const language = 'English';
 
@@ -51,3 +51,83 @@ if (population > 33000000) {
 }
 
 console.log(populationInfo);
+
+console.log('19' - '13' + '17')
+
+/**
+let numNeighbours = prompt('How many neighbour countries does your country have?');
+if (Number(numNeighbours) === 1) {
+  console.log(`Only 1 border`)
+} else if (numNeighbours > 1) {
+  console.log(`More than 1 border`)
+} else {
+  console.log(`No borders`)
+}
+**/
+
+if (language === 'English' && population > 50000000 && !isIsland){
+  console.log(`You should live in Scotland`)
+} else {
+  console.log(`Don't live in Scotland`)
+}
+
+const dolphinScore1 = 96;
+const dolphinScore2 = 108;
+const dolphinScore3 = 89;
+const koalasScore1 = 88;
+const koalasScore2 = 91;
+const koalasScore3 = 110;
+
+const dolphinAverageScore = ((dolphinScore1 + dolphinScore2 + dolphinScore3) / 3);
+const koalasAverageScore = ((koalasScore1 + koalasScore2 + koalasScore3) / 3);
+
+if (dolphinAverageScore > koalasAverageScore && dolphinAverageScore > 100){
+  console.log(`Dolphins win!`);
+} else if (dolphinAverageScore === koalasAverageScore && koalasAverageScore > 100 && koalasAverageScore > 100) {
+  console.log(`It's a tie!`);
+} else if (koalasAverageScore > dolphinAverageScore && koalasAverageScore > 100) {
+  console.log(`Koalas win!`);
+} else {
+  console.log(`No one wins.`);
+};
+
+const day = 'monday';
+if (day === 'monday') {
+  console.log('Monday');
+} else if (day === 'tuesday') {
+  console.log('tuesday');
+} else if (day === 'wednesday' || day === 'thursday') {
+  console.log('wednesday or thursday');
+} else if (day === 'saturday' || day === 'sunday') {
+  console.log('sat or sun')
+} else {
+  console.log('Invalid')
+}
+
+switch (language) {
+  case 'chinese':
+  case 'mandarin':
+    console.log('MOST number of native speakers!');
+    break;
+  case 'spanish':
+    console.log('2nd place in number of native speakers');
+    break;
+  case 'English':
+    console.log('3rd place');
+    break;
+  case 'hindi':
+    console.log('Number 4');
+    break;
+  case 'arabic':
+    console.log('5th most spoken language');
+    break;
+  default:
+    console.log('Great language too :D');
+}
+
+population > 33000000 ? console.log(`UK's population is above average`) : console.log(`UK's population is below average`);
+
+console.log(
+`${country}'s population is ${population > 33 ? 'above' :
+'below'} average`,
+);
