@@ -131,3 +131,20 @@ console.log(
 `${country}'s population is ${population > 33 ? 'above' :
 'below'} average`,
 );
+
+const bill = 275;
+let tip;
+switch (bill) {
+  case bill >= 50 && bill <= 300:
+    tip = bill * 0.15;
+    break;
+  default:
+    tip = bill * 0.2;
+    break;
+}
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value
+  ${bill + tip}`)
+
+const tip_2 = bill >= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was ${bill}, the tip was ${tip_2}, and the total value
+  ${bill + tip_2}`)
