@@ -31,3 +31,27 @@ function describePopulation (country, population) {
 }
 
 console.log(describePopulation('scotland', 5500000))
+
+const calcAverage = (scoreOne, scoreTwo, scoreThree) => {
+  return (scoreOne + scoreTwo + scoreThree) / 3;
+};
+
+const dolphinAverage = calcAverage(44, 23, 71);
+const koalasAverage = calcAverage(65, 54, 49);
+
+const dolphinAverage2 = calcAverage(85, 54, 41);
+const koalasAverage2 = calcAverage(23, 34, 27);
+
+
+function checkWinner (avgDolphins, avgKoalas) {
+  if (avgDolphins > avgKoalas) {
+    console.log(`Dolphins win (${avgDolphins} > ${avgKoalas})`);
+  } else if (avgKoalas > avgDolphins) {
+    console.log(`Koalas win (${avgKoalas} > ${avgDolphins})`);
+  } else {
+    console.log(`It's a draw.`)
+  }
+}
+
+checkWinner(dolphinAverage, koalasAverage);
+checkWinner(dolphinAverage2, koalasAverage2);
