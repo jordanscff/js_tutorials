@@ -55,3 +55,9 @@ function checkWinner (avgDolphins, avgKoalas) {
 
 checkWinner(dolphinAverage, koalasAverage);
 checkWinner(dolphinAverage2, koalasAverage2);
+
+const populations = [56000000,5500000,3100000,1900000];
+console.log(populations);
+
+const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3])];
+console.log(percentages)
