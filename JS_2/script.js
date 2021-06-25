@@ -73,3 +73,23 @@ if (!neighbours.includes('Germany')) {
 const spainIndex = neighbours.indexOf('Spain')
 neighbours[spainIndex] = 'Espana'
 console.log(neighbours);
+
+let tip;
+
+function calcTip (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [125, 555, 44]
+const tips = []
+tips.push(calcTip(bills[0]))
+tips.push(calcTip(bills[1]))
+tips.push(calcTip(bills[2]))
+
+const total = []
+total.push(bills[0] + tips[0])
+total.push(bills[1] + tips[1])
+total.push(bills[2] + tips[2])
+
+console.log(tips);
+console.log(total);
