@@ -97,8 +97,17 @@ console.log(total);
 const jordan = {
   firstName: "Jordan",
   lastName: "Ball",
+  birthYear: 1996,
   friends: ['Andrew', 'Chris', 'Connor'],
-  job: 'developer'
+  job: 'developer',
+  hasDriversLicence: true,
+  calcAge: function(){
+    this.age = 2021 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function() {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${jordan.job}, and he has ${this.hasDriversLicence ? 'a': 'no'} driver's licence`
+  }
 };
 
 console.log(`${jordan.firstName} has ${jordan.friends.length} friends and his
@@ -118,3 +127,36 @@ myCountry.population += 2;
  console.log(myCountry.population);
  myCountry['population'] -= 2;
  console.log(myCountry.population);
+
+console.log(`${jordan.getSummary()}`)
+
+const markBMI = {
+  fullName :'Mark Smith',
+  mass:78,
+  height:1.69,
+  calcBMI: function(){
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  }
+};
+
+const johnBMI = {
+  fullName :'John Smith',
+  mass:92,
+  height:1.95,
+  calcBMI: function(){
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  }
+};
+
+console.log(markBMI.calcBMI());
+console.log(johnBMI.calcBMI());
+
+if(markBMI.bmi > johnBMI.bmi) {
+  console.log(`${markBMI.fullName}'s BMI (${markBMI.bmi}) is
+  higher than ${johnBMI.fullName}'s BMI (${johnBMI.bmi})`)
+} else {
+  console.log(`${johnBMI.fullName}'s BMI (${johnBMI.bmi}) is
+  higher than ${markBMI.fullName}'s BMI (${markBMI.bmi})`)
+}
