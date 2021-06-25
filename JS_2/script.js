@@ -61,3 +61,15 @@ console.log(populations);
 
 const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3])];
 console.log(percentages)
+
+const neighbours = ['Spain', 'Portugal', 'Germany'];
+neighbours.push('Utopia');
+console.log(neighbours);
+neighbours.pop('Utopia');
+console.log(neighbours);
+if (!neighbours.includes('Germany')) {
+  console.log('Probaby not a central European country :D');
+}
+const spainIndex = neighbours.indexOf('Spain')
+neighbours[spainIndex] = 'Espana'
+console.log(neighbours);
