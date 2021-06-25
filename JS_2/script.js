@@ -93,3 +93,28 @@ total.push(bills[2] + tips[2])
 
 console.log(tips);
 console.log(total);
+
+const jordan = {
+  firstName: "Jordan",
+  lastName: "Ball",
+  friends: ['Andrew', 'Chris', 'Connor'],
+  job: 'developer'
+};
+
+console.log(`${jordan.firstName} has ${jordan.friends.length} friends and his
+best friend is called ${jordan.friends[2]}`)
+
+const myCountry = {
+  country:"Scotland",
+  capital:"Edinburgh",
+  langauge:"English",
+  population:55000000,
+  neighbours:["England", "Northern Ireland", "Ireland", "Wales"]
+}
+
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.langauge}-speaking people, ${myCountry.neighbours.length} neightbouring countries and a capital called ${myCountry.capital}.`)
+
+myCountry.population += 2;
+ console.log(myCountry.population);
+ myCountry['population'] -= 2;
+ console.log(myCountry.population);
