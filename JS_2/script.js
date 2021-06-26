@@ -118,10 +118,20 @@ const myCountry = {
   capital:"Edinburgh",
   langauge:"English",
   population:55000000,
-  neighbours:["England", "Northern Ireland", "Ireland", "Wales"]
-}
+  neighbours:["England", "Northern Ireland", "Ireland", "Wales"],
+  describle: function(){
+    console.log(`${this.country} has ${this.population} million ${this.langauge}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`)
+  },
+  checkIsland: function() {
+    this.isIsland = this.neighbours.length === 0 ? true : false
+  }
+};
 
-console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.langauge}-speaking people, ${myCountry.neighbours.length} neightbouring countries and a capital called ${myCountry.capital}.`)
+myCountry.describle()
+myCountry.checkIsland();
+console.log(myCountry);
+
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.langauge}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`)
 
 myCountry.population += 2;
  console.log(myCountry.population);
