@@ -60,7 +60,7 @@ const populations = [56000000,5500000,3100000,1900000];
 console.log(populations);
 
 const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3])];
-console.log(percentages)
+console.log(`percentages 1 ` + percentages )
 
 const neighbours = ['Spain', 'Portugal', 'Germany'];
 neighbours.push('Utopia');
@@ -93,6 +93,25 @@ total.push(bills[2] + tips[2])
 
 console.log(tips);
 console.log(total);
+
+const billsArray = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tipsArray = [];
+const totalsArray = [];
+
+for (let i = 0; i < billsArray.length; i++) {
+  console.log("Bills array")
+  console.log(calcTip(billsArray[i]))
+}
+
+let sum = 0;
+let calcAverageArr = function(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    sum = sum + arr[i]
+  }
+  return sum / arr.length;
+}
+console.log("Bills total")
+console.log(calcAverageArr(billsArray))
 
 const jordan = {
   firstName: "Jordan",
@@ -170,3 +189,28 @@ if(markBMI.bmi > johnBMI.bmi) {
   console.log(`${johnBMI.fullName}'s BMI (${johnBMI.bmi}) is
   higher than ${markBMI.fullName}'s BMI (${markBMI.bmi})`)
 }
+
+for (var i = 1; i <= 50; i++) {
+  console.log(`Voter number ${i} is currently voting`);
+}
+
+const percentages2 = []
+for (var i = 0; i < populations.length; i++) {
+  percentages2.push(percentageOfWorld1(populations[i]));
+}
+console.log(percentages2)
+
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden',
+'Russia']];
+//I couldnt work this one out
+for (let i = 0; i < listOfNeighbours.length; i++)
+for (let y = 0; y < listOfNeighbours[i].length; y++)
+console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+
+const percentages3 = []
+let x = 0
+while (x < populations.length) {
+  percentages3.push(percentageOfWorld1(populations[x]));
+  x++;
+}
+console.log(percentages3)
