@@ -1,7 +1,6 @@
 'use strict';
 
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
-document.querySelector('.number').textContent = secretNumber;
 let score = 20;
 document.querySelector('.score').textContent = score;
 
